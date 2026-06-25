@@ -85,32 +85,41 @@ header img { height: 44px; width: auto; }
 #intro {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 73px);
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background: var(--cream);
-  padding: 60px 24px;
+  padding: 48px 16px;
 }
 
 .intro-bg {
   position: absolute;
-  inset: 0;
+  inset: -12%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 18px;
+  padding: 8px;
   pointer-events: none;
 }
 
-.produce-item {
-  position: absolute;
-  width: 72px;
-  height: 72px;
+.p-item {
+  width: 86px;
+  height: 86px;
   object-fit: contain;
-  will-change: transform;
+  flex-shrink: 0;
   animation: snap var(--dur) steps(1) infinite var(--delay);
-  transform-origin: center center;
+  transform-origin: center;
 }
 
-/* Snap between exactly two angles — no tween, no ease */
+/* offset every 3rd and 5th item down slightly for organic feel */
+.p-item:nth-child(3n) { margin-top: 24px; }
+.p-item:nth-child(5n) { margin-top: -10px; }
+.p-item:nth-child(7n) { margin-top: 14px; }
+
+/* Snap between exactly two angles */
 @keyframes snap {
   0%, 49.9% { transform: rotate(var(--a)); }
   50%, 100%  { transform: rotate(var(--b)); }
@@ -128,13 +137,26 @@ header img { height: 44px; width: auto; }
   width: 82%;
 }
 
+.intro-card {
+  position: relative;
+  z-index: 10;
+  background: var(--white);
+  border: 2px solid #214e33;
+  border-radius: 28px;
+  padding: 36px 32px 44px;
+  text-align: center;
+  max-width: 440px;
+  width: 82%;
+}
+
 .intro-card .eyebrow {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--sage);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
+  white-space: nowrap;
 }
 
 .intro-card h1 {
@@ -436,7 +458,8 @@ header img { height: 44px; width: auto; }
   .option-btn { padding: 18px 12px; font-size: 0.88rem; }
   .result-img { height: 260px; }
   .macro-value { font-size: 1.2rem; }
-  .intro-card { width: 78%; padding: 28px 24px 36px; }
+  .intro-card { width: 84%; padding: 28px 22px 36px; }
+  .p-item { width: 72px; height: 72px; }
 }
 </style>
 </head>
@@ -449,24 +472,48 @@ header img { height: 44px; width: auto; }
 <div id="intro">
   <!-- Tiled produce grid background -->
   <div class="intro-bg">
-    <img class="produce-item" id="p0" style="top:-6%;left:-4%;width:90px;height:90px;--a:-14deg;--b:8deg;--dur:1.2s;--delay:-0.0s" alt="">
-    <img class="produce-item" id="p1" style="top:-4%;left:18%;width:76px;height:76px;--a:12deg;--b:-10deg;--dur:1.5s;--delay:-0.4s" alt="">
-    <img class="produce-item" id="p2" style="top:-7%;left:38%;width:84px;height:84px;--a:-8deg;--b:16deg;--dur:1.1s;--delay:-0.9s" alt="">
-    <img class="produce-item" id="p3" style="top:-3%;left:58%;width:80px;height:80px;--a:18deg;--b:-6deg;--dur:1.6s;--delay:-1.3s" alt="">
-    <img class="produce-item" id="p4" style="top:-5%;left:78%;width:88px;height:88px;--a:-16deg;--b:10deg;--dur:1.3s;--delay:-0.6s" alt="">
-    <img class="produce-item" id="p5" style="top:-4%;left:96%;width:78px;height:78px;--a:6deg;--b:-18deg;--dur:1.4s;--delay:-1.7s" alt="">
-    <img class="produce-item" id="p6" style="top:22%;left:-7%;width:82px;height:82px;--a:-10deg;--b:14deg;--dur:1.5s;--delay:-0.3s" alt="">
-    <img class="produce-item" id="p7" style="top:18%;left:90%;width:86px;height:86px;--a:16deg;--b:-12deg;--dur:1.2s;--delay:-1.1s" alt="">
-    <img class="produce-item" id="p8" style="top:40%;left:-9%;width:88px;height:88px;--a:-6deg;--b:18deg;--dur:1.4s;--delay:-0.7s" alt="">
-    <img class="produce-item" id="p9" style="top:38%;left:92%;width:80px;height:80px;--a:-14deg;--b:8deg;--dur:1.6s;--delay:-1.5s" alt="">
-    <img class="produce-item" id="p10" style="top:58%;left:-5%;width:84px;height:84px;--a:12deg;--b:-10deg;--dur:1.3s;--delay:-0.2s" alt="">
-    <img class="produce-item" id="p11" style="top:56%;left:88%;width:90px;height:90px;--a:-8deg;--b:16deg;--dur:1.1s;--delay:-0.8s" alt="">
-    <img class="produce-item" id="p12" style="top:76%;left:-3%;width:80px;height:80px;--a:18deg;--b:-6deg;--dur:1.5s;--delay:-1.2s" alt="">
-    <img class="produce-item" id="p13" style="top:80%;left:16%;width:86px;height:86px;--a:-16deg;--b:10deg;--dur:1.2s;--delay:-0.5s" alt="">
-    <img class="produce-item" id="p14" style="top:78%;left:36%;width:76px;height:76px;--a:6deg;--b:-18deg;--dur:1.6s;--delay:-1.9s" alt="">
-    <img class="produce-item" id="p15" style="top:82%;left:56%;width:88px;height:88px;--a:-10deg;--b:14deg;--dur:1.3s;--delay:-0.3s" alt="">
-    <img class="produce-item" id="p16" style="top:77%;left:76%;width:82px;height:82px;--a:16deg;--b:-12deg;--dur:1.4s;--delay:-1.0s" alt="">
-    <img class="produce-item" id="p17" style="top:81%;left:94%;width:84px;height:84px;--a:-6deg;--b:18deg;--dur:1.1s;--delay:-0.6s" alt="">
+    <img class="p-item" id="p0" style="--a:-14deg;--b:8deg;--dur:1.0s;--delay:-0.0s" alt="">
+    <img class="p-item" id="p1" style="--a:12deg;--b:-10deg;--dur:1.15s;--delay:-0.23s" alt="">
+    <img class="p-item" id="p2" style="--a:-8deg;--b:16deg;--dur:1.3s;--delay:-0.46s" alt="">
+    <img class="p-item" id="p3" style="--a:18deg;--b:-6deg;--dur:1.45s;--delay:-0.69s" alt="">
+    <img class="p-item" id="p4" style="--a:-16deg;--b:10deg;--dur:1.6s;--delay:-0.92s" alt="">
+    <img class="p-item" id="p5" style="--a:6deg;--b:-18deg;--dur:1.75s;--delay:-1.15s" alt="">
+    <img class="p-item" id="p6" style="--a:-10deg;--b:14deg;--dur:1.9s;--delay:-1.38s" alt="">
+    <img class="p-item" id="p7" style="--a:16deg;--b:-12deg;--dur:1.0s;--delay:-1.61s" alt="">
+    <img class="p-item" id="p8" style="--a:-6deg;--b:18deg;--dur:1.15s;--delay:-1.84s" alt="">
+    <img class="p-item" id="p9" style="--a:-14deg;--b:8deg;--dur:1.3s;--delay:-2.07s" alt="">
+    <img class="p-item" id="p10" style="--a:12deg;--b:-10deg;--dur:1.45s;--delay:-2.3s" alt="">
+    <img class="p-item" id="p11" style="--a:-8deg;--b:16deg;--dur:1.6s;--delay:-2.53s" alt="">
+    <img class="p-item" id="p12" style="--a:18deg;--b:-6deg;--dur:1.75s;--delay:-2.76s" alt="">
+    <img class="p-item" id="p13" style="--a:-16deg;--b:10deg;--dur:1.9s;--delay:-2.99s" alt="">
+    <img class="p-item" id="p14" style="--a:6deg;--b:-18deg;--dur:1.0s;--delay:-3.22s" alt="">
+    <img class="p-item" id="p15" style="--a:-10deg;--b:14deg;--dur:1.15s;--delay:-3.45s" alt="">
+    <img class="p-item" id="p16" style="--a:16deg;--b:-12deg;--dur:1.3s;--delay:-0.18s" alt="">
+    <img class="p-item" id="p17" style="--a:-6deg;--b:18deg;--dur:1.45s;--delay:-0.41s" alt="">
+    <img class="p-item" id="p18" style="--a:-14deg;--b:8deg;--dur:1.6s;--delay:-0.64s" alt="">
+    <img class="p-item" id="p19" style="--a:12deg;--b:-10deg;--dur:1.75s;--delay:-0.87s" alt="">
+    <img class="p-item" id="p20" style="--a:-8deg;--b:16deg;--dur:1.9s;--delay:-1.1s" alt="">
+    <img class="p-item" id="p21" style="--a:18deg;--b:-6deg;--dur:1.0s;--delay:-1.33s" alt="">
+    <img class="p-item" id="p22" style="--a:-16deg;--b:10deg;--dur:1.15s;--delay:-1.56s" alt="">
+    <img class="p-item" id="p23" style="--a:6deg;--b:-18deg;--dur:1.3s;--delay:-1.79s" alt="">
+    <img class="p-item" id="p24" style="--a:-10deg;--b:14deg;--dur:1.45s;--delay:-2.02s" alt="">
+    <img class="p-item" id="p25" style="--a:16deg;--b:-12deg;--dur:1.6s;--delay:-2.25s" alt="">
+    <img class="p-item" id="p26" style="--a:-6deg;--b:18deg;--dur:1.75s;--delay:-2.48s" alt="">
+    <img class="p-item" id="p27" style="--a:-14deg;--b:8deg;--dur:1.9s;--delay:-2.71s" alt="">
+    <img class="p-item" id="p28" style="--a:12deg;--b:-10deg;--dur:1.0s;--delay:-2.94s" alt="">
+    <img class="p-item" id="p29" style="--a:-8deg;--b:16deg;--dur:1.15s;--delay:-3.17s" alt="">
+    <img class="p-item" id="p30" style="--a:18deg;--b:-6deg;--dur:1.3s;--delay:-3.4s" alt="">
+    <img class="p-item" id="p31" style="--a:-16deg;--b:10deg;--dur:1.45s;--delay:-0.13s" alt="">
+    <img class="p-item" id="p32" style="--a:6deg;--b:-18deg;--dur:1.6s;--delay:-0.36s" alt="">
+    <img class="p-item" id="p33" style="--a:-10deg;--b:14deg;--dur:1.75s;--delay:-0.59s" alt="">
+    <img class="p-item" id="p34" style="--a:16deg;--b:-12deg;--dur:1.9s;--delay:-0.82s" alt="">
+    <img class="p-item" id="p35" style="--a:-6deg;--b:18deg;--dur:1.0s;--delay:-1.05s" alt="">
+    <img class="p-item" id="p36" style="--a:-14deg;--b:8deg;--dur:1.15s;--delay:-1.28s" alt="">
+    <img class="p-item" id="p37" style="--a:12deg;--b:-10deg;--dur:1.3s;--delay:-1.51s" alt="">
+    <img class="p-item" id="p38" style="--a:-8deg;--b:16deg;--dur:1.45s;--delay:-1.74s" alt="">
+    <img class="p-item" id="p39" style="--a:18deg;--b:-6deg;--dur:1.6s;--delay:-1.97s" alt="">
+    <img class="p-item" id="p40" style="--a:-16deg;--b:10deg;--dur:1.75s;--delay:-2.2s" alt="">
+    <img class="p-item" id="p41" style="--a:6deg;--b:-18deg;--dur:1.9s;--delay:-2.43s" alt="">
   </div>
 
   <!-- Card -->
@@ -801,6 +848,30 @@ document.getElementById("p14").src=I["fruits2-02"];
 document.getElementById("p15").src=I["fruits2-03"];
 document.getElementById("p16").src=I["fruits2-04"];
 document.getElementById("p17").src=I["fruits2-05"];
+document.getElementById("p18").src=I["fruits2-06"];
+document.getElementById("p19").src=I["fruits2-07"];
+document.getElementById("p20").src=I["fruits2-08"];
+document.getElementById("p21").src=I["fruits2-09"];
+document.getElementById("p22").src=I["fruits2-10"];
+document.getElementById("p23").src=I["fruits2-11"];
+document.getElementById("p24").src=I["fruits2-12"];
+document.getElementById("p25").src=I["fruits2-13"];
+document.getElementById("p26").src=I["fruits2-01"];
+document.getElementById("p27").src=I["fruits2-02"];
+document.getElementById("p28").src=I["fruits2-03"];
+document.getElementById("p29").src=I["fruits2-04"];
+document.getElementById("p30").src=I["fruits2-05"];
+document.getElementById("p31").src=I["fruits2-06"];
+document.getElementById("p32").src=I["fruits2-07"];
+document.getElementById("p33").src=I["fruits2-08"];
+document.getElementById("p34").src=I["fruits2-09"];
+document.getElementById("p35").src=I["fruits2-10"];
+document.getElementById("p36").src=I["fruits2-11"];
+document.getElementById("p37").src=I["fruits2-12"];
+document.getElementById("p38").src=I["fruits2-13"];
+document.getElementById("p39").src=I["fruits2-01"];
+document.getElementById("p40").src=I["fruits2-02"];
+document.getElementById("p41").src=I["fruits2-03"];
 })();
 </script>
 </body>
