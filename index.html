@@ -122,10 +122,10 @@ header img { height: 44px; width: auto; }
   background: var(--white);
   border: 2px solid #214e33;
   border-radius: 28px;
-  padding: 48px 44px 52px;
+  padding: 36px 32px 44px;
   text-align: center;
-  max-width: 480px;
-  width: 100%;
+  max-width: 440px;
+  width: 82%;
 }
 
 .intro-card .eyebrow {
@@ -140,7 +140,7 @@ header img { height: 44px; width: auto; }
 .intro-card h1 {
   font-family: 'VC Honey', serif;
   font-weight: 700;
-  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   line-height: 1.08;
   color: var(--green);
   margin-bottom: 18px;
@@ -436,6 +436,7 @@ header img { height: 44px; width: auto; }
   .option-btn { padding: 18px 12px; font-size: 0.88rem; }
   .result-img { height: 260px; }
   .macro-value { font-size: 1.2rem; }
+  .intro-card { width: 78%; padding: 28px 24px 36px; }
 }
 </style>
 </head>
@@ -448,42 +449,24 @@ header img { height: 44px; width: auto; }
 <div id="intro">
   <!-- Tiled produce grid background -->
   <div class="intro-bg">
-    <img class="produce-item" id="p0" style="top:6%;left:5%;--a:-14deg;--b:8deg;--dur:1.0s;--delay:-0.0s" alt="">
-    <img class="produce-item" id="p1" style="top:6%;left:21%;--a:12deg;--b:-10deg;--dur:1.2s;--delay:-0.37s" alt="">
-    <img class="produce-item" id="p2" style="top:6%;left:37%;--a:-8deg;--b:16deg;--dur:1.4s;--delay:-0.74s" alt="">
-    <img class="produce-item" id="p3" style="top:6%;left:53%;--a:18deg;--b:-6deg;--dur:1.6s;--delay:-1.11s" alt="">
-    <img class="produce-item" id="p4" style="top:6%;left:69%;--a:-16deg;--b:10deg;--dur:1.8s;--delay:-1.48s" alt="">
-    <img class="produce-item" id="p5" style="top:6%;left:85%;--a:6deg;--b:-18deg;--dur:1.0s;--delay:-1.85s" alt="">
-    <img class="produce-item" id="p6" style="top:22%;left:8%;--a:-14deg;--b:8deg;--dur:1.2s;--delay:-2.22s" alt="">
-    <img class="produce-item" id="p7" style="top:22%;left:24%;--a:12deg;--b:-10deg;--dur:1.4s;--delay:-2.59s" alt="">
-    <img class="produce-item" id="p8" style="top:22%;left:40%;--a:-8deg;--b:16deg;--dur:1.6s;--delay:-2.96s" alt="">
-    <img class="produce-item" id="p9" style="top:22%;left:56%;--a:18deg;--b:-6deg;--dur:1.8s;--delay:-0.33s" alt="">
-    <img class="produce-item" id="p10" style="top:22%;left:72%;--a:-16deg;--b:10deg;--dur:1.0s;--delay:-0.7s" alt="">
-    <img class="produce-item" id="p11" style="top:22%;left:88%;--a:6deg;--b:-18deg;--dur:1.2s;--delay:-1.07s" alt="">
-    <img class="produce-item" id="p12" style="top:40%;left:5%;--a:-14deg;--b:8deg;--dur:1.4s;--delay:-1.44s" alt="">
-    <img class="produce-item" id="p13" style="top:40%;left:21%;--a:12deg;--b:-10deg;--dur:1.6s;--delay:-1.81s" alt="">
-    <img class="produce-item" id="p14" style="top:40%;left:37%;--a:-8deg;--b:16deg;--dur:1.8s;--delay:-2.18s" alt="">
-    <img class="produce-item" id="p15" style="top:40%;left:53%;--a:18deg;--b:-6deg;--dur:1.0s;--delay:-2.55s" alt="">
-    <img class="produce-item" id="p16" style="top:40%;left:69%;--a:-16deg;--b:10deg;--dur:1.2s;--delay:-2.92s" alt="">
-    <img class="produce-item" id="p17" style="top:40%;left:85%;--a:6deg;--b:-18deg;--dur:1.4s;--delay:-0.29s" alt="">
-    <img class="produce-item" id="p18" style="top:58%;left:8%;--a:-14deg;--b:8deg;--dur:1.6s;--delay:-0.66s" alt="">
-    <img class="produce-item" id="p19" style="top:58%;left:24%;--a:12deg;--b:-10deg;--dur:1.8s;--delay:-1.03s" alt="">
-    <img class="produce-item" id="p20" style="top:58%;left:40%;--a:-8deg;--b:16deg;--dur:1.0s;--delay:-1.4s" alt="">
-    <img class="produce-item" id="p21" style="top:58%;left:56%;--a:18deg;--b:-6deg;--dur:1.2s;--delay:-1.77s" alt="">
-    <img class="produce-item" id="p22" style="top:58%;left:72%;--a:-16deg;--b:10deg;--dur:1.4s;--delay:-2.14s" alt="">
-    <img class="produce-item" id="p23" style="top:58%;left:88%;--a:6deg;--b:-18deg;--dur:1.6s;--delay:-2.51s" alt="">
-    <img class="produce-item" id="p24" style="top:76%;left:5%;--a:-14deg;--b:8deg;--dur:1.8s;--delay:-2.88s" alt="">
-    <img class="produce-item" id="p25" style="top:76%;left:21%;--a:12deg;--b:-10deg;--dur:1.0s;--delay:-0.25s" alt="">
-    <img class="produce-item" id="p26" style="top:76%;left:37%;--a:-8deg;--b:16deg;--dur:1.2s;--delay:-0.62s" alt="">
-    <img class="produce-item" id="p27" style="top:76%;left:53%;--a:18deg;--b:-6deg;--dur:1.4s;--delay:-0.99s" alt="">
-    <img class="produce-item" id="p28" style="top:76%;left:69%;--a:-16deg;--b:10deg;--dur:1.6s;--delay:-1.36s" alt="">
-    <img class="produce-item" id="p29" style="top:76%;left:85%;--a:6deg;--b:-18deg;--dur:1.8s;--delay:-1.73s" alt="">
-    <img class="produce-item" id="p30" style="top:93%;left:8%;--a:-14deg;--b:8deg;--dur:1.0s;--delay:-2.1s" alt="">
-    <img class="produce-item" id="p31" style="top:93%;left:24%;--a:12deg;--b:-10deg;--dur:1.2s;--delay:-2.47s" alt="">
-    <img class="produce-item" id="p32" style="top:93%;left:40%;--a:-8deg;--b:16deg;--dur:1.4s;--delay:-2.84s" alt="">
-    <img class="produce-item" id="p33" style="top:93%;left:56%;--a:18deg;--b:-6deg;--dur:1.6s;--delay:-0.21s" alt="">
-    <img class="produce-item" id="p34" style="top:93%;left:72%;--a:-16deg;--b:10deg;--dur:1.8s;--delay:-0.58s" alt="">
-    <img class="produce-item" id="p35" style="top:93%;left:88%;--a:6deg;--b:-18deg;--dur:1.0s;--delay:-0.95s" alt="">
+    <img class="produce-item" id="p0" style="top:-6%;left:-4%;width:90px;height:90px;--a:-14deg;--b:8deg;--dur:1.2s;--delay:-0.0s" alt="">
+    <img class="produce-item" id="p1" style="top:-4%;left:18%;width:76px;height:76px;--a:12deg;--b:-10deg;--dur:1.5s;--delay:-0.4s" alt="">
+    <img class="produce-item" id="p2" style="top:-7%;left:38%;width:84px;height:84px;--a:-8deg;--b:16deg;--dur:1.1s;--delay:-0.9s" alt="">
+    <img class="produce-item" id="p3" style="top:-3%;left:58%;width:80px;height:80px;--a:18deg;--b:-6deg;--dur:1.6s;--delay:-1.3s" alt="">
+    <img class="produce-item" id="p4" style="top:-5%;left:78%;width:88px;height:88px;--a:-16deg;--b:10deg;--dur:1.3s;--delay:-0.6s" alt="">
+    <img class="produce-item" id="p5" style="top:-4%;left:96%;width:78px;height:78px;--a:6deg;--b:-18deg;--dur:1.4s;--delay:-1.7s" alt="">
+    <img class="produce-item" id="p6" style="top:22%;left:-7%;width:82px;height:82px;--a:-10deg;--b:14deg;--dur:1.5s;--delay:-0.3s" alt="">
+    <img class="produce-item" id="p7" style="top:18%;left:90%;width:86px;height:86px;--a:16deg;--b:-12deg;--dur:1.2s;--delay:-1.1s" alt="">
+    <img class="produce-item" id="p8" style="top:40%;left:-9%;width:88px;height:88px;--a:-6deg;--b:18deg;--dur:1.4s;--delay:-0.7s" alt="">
+    <img class="produce-item" id="p9" style="top:38%;left:92%;width:80px;height:80px;--a:-14deg;--b:8deg;--dur:1.6s;--delay:-1.5s" alt="">
+    <img class="produce-item" id="p10" style="top:58%;left:-5%;width:84px;height:84px;--a:12deg;--b:-10deg;--dur:1.3s;--delay:-0.2s" alt="">
+    <img class="produce-item" id="p11" style="top:56%;left:88%;width:90px;height:90px;--a:-8deg;--b:16deg;--dur:1.1s;--delay:-0.8s" alt="">
+    <img class="produce-item" id="p12" style="top:76%;left:-3%;width:80px;height:80px;--a:18deg;--b:-6deg;--dur:1.5s;--delay:-1.2s" alt="">
+    <img class="produce-item" id="p13" style="top:80%;left:16%;width:86px;height:86px;--a:-16deg;--b:10deg;--dur:1.2s;--delay:-0.5s" alt="">
+    <img class="produce-item" id="p14" style="top:78%;left:36%;width:76px;height:76px;--a:6deg;--b:-18deg;--dur:1.6s;--delay:-1.9s" alt="">
+    <img class="produce-item" id="p15" style="top:82%;left:56%;width:88px;height:88px;--a:-10deg;--b:14deg;--dur:1.3s;--delay:-0.3s" alt="">
+    <img class="produce-item" id="p16" style="top:77%;left:76%;width:82px;height:82px;--a:16deg;--b:-12deg;--dur:1.4s;--delay:-1.0s" alt="">
+    <img class="produce-item" id="p17" style="top:81%;left:94%;width:84px;height:84px;--a:-6deg;--b:18deg;--dur:1.1s;--delay:-0.6s" alt="">
   </div>
 
   <!-- Card -->
@@ -818,24 +801,6 @@ document.getElementById("p14").src=I["fruits2-02"];
 document.getElementById("p15").src=I["fruits2-03"];
 document.getElementById("p16").src=I["fruits2-04"];
 document.getElementById("p17").src=I["fruits2-05"];
-document.getElementById("p18").src=I["fruits2-06"];
-document.getElementById("p19").src=I["fruits2-07"];
-document.getElementById("p20").src=I["fruits2-08"];
-document.getElementById("p21").src=I["fruits2-09"];
-document.getElementById("p22").src=I["fruits2-10"];
-document.getElementById("p23").src=I["fruits2-11"];
-document.getElementById("p24").src=I["fruits2-12"];
-document.getElementById("p25").src=I["fruits2-13"];
-document.getElementById("p26").src=I["fruits2-01"];
-document.getElementById("p27").src=I["fruits2-02"];
-document.getElementById("p28").src=I["fruits2-03"];
-document.getElementById("p29").src=I["fruits2-04"];
-document.getElementById("p30").src=I["fruits2-05"];
-document.getElementById("p31").src=I["fruits2-06"];
-document.getElementById("p32").src=I["fruits2-07"];
-document.getElementById("p33").src=I["fruits2-08"];
-document.getElementById("p34").src=I["fruits2-09"];
-document.getElementById("p35").src=I["fruits2-10"];
 })();
 </script>
 </body>
